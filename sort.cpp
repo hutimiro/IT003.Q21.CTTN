@@ -25,7 +25,6 @@ void read_column_csv(const string &filename, float column_index, vector<float> &
                 try {
                     data.push_back(stof(cell));
                 } catch (const invalid_argument& e) {
-                    // Ignore lines that are not numbers (like headers)
                 } catch (const out_of_range& e) {
                     // Ignore numbers that get too big for float
                 }
@@ -42,10 +41,10 @@ int main() {
 
     for (int i = 0; i < 10; ++i) {
 
-        read_column_csv("random_numbers.csv", i, data); // Read each column from CSV
+        read_column_csv("random_numbers.csv", i, data); 
 
 
-        vector<float> data_copy = data; // Copy original data for each sort
+        vector<float> data_copy = data; 
 
         auto start = chrono::high_resolution_clock::now();
 
@@ -57,8 +56,8 @@ int main() {
 
         cout << "Run " << (i + 1) << ": " << duration << " ms" << endl;
         
-        print_first_n(data_copy, 5); // Print first 5 sorted numbers
-        data.clear(); // Clear data for next iteration
+        print_first_n(data_copy, 5); 
+        data.clear();
 
     }
 
