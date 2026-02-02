@@ -4,16 +4,15 @@ import time
 avgtime = 0
 def merge_sort(arr):
     if len(arr) > 1:
-        mid = len(arr) // 2  # Finding the mid of the array
-        L = arr[:mid]        # Dividing the array elements into 2 halves
+        mid = len(arr) // 2 
+        L = arr[:mid]        
         R = arr[mid:]
 
-        merge_sort(L)        # Sorting the first half
-        merge_sort(R)        # Sorting the second half
+        merge_sort(L)        
+        merge_sort(R)       
 
         i = j = k = 0
 
-        # Copy data to temp arrays L[] and R[]
         while i < len(L) and j < len(R):
             if L[i] < R[j]:
                 arr[k] = L[i]
@@ -23,7 +22,6 @@ def merge_sort(arr):
                 j += 1
             k += 1
 
-        # Checking if any element was left
         while i < len(L):
             arr[k] = L[i]
             i += 1
