@@ -1,7 +1,6 @@
 import numpy as np
 import pandas as pd
 
-# 1. Generate the data (as shown before)
 integers1 = np.random.randint(0, 1000001, 1000000)
 integers2 = np.random.randint(0, 1000001, 1000000)
 integers3 = np.random.randint(0, 1000001, 1000000)
@@ -13,7 +12,6 @@ real_numbers3 = np.random.rand(1000000) * 1000000
 real_numbers4 = np.random.rand(1000000) * 1000000
 real_numbers5 = np.random.rand(1000000) * 1000000
 
-# 2. Sort the first integer array in ascending order
 sorted_arr1 = np.sort(integers1)
 sorted_arr2 = np.sort(integers2)[::-1]
 
@@ -30,7 +28,6 @@ df = pd.DataFrame({
     'Real_Number_Column_5': real_numbers5
 })
 
-# 3. Save to CSV
 df.to_csv('random_numbers.csv', index=False)
 
 print("File saved as random_numbers.csv")
