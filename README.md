@@ -1,5 +1,4 @@
 Nộp bài tập IT003.Q21.CTTN by Quách Cường
-link google doc:
 
 link dataset:
 https://drive.google.com/file/d/1yYiuFcTTUE8T0525fW8iBowtg0tXdrqf/view?usp=sharing
