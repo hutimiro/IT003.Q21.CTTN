@@ -26,7 +26,6 @@ void read_column_csv(const string &filename, float column_index, vector<float> &
                     data.push_back(stof(cell));
                 } catch (const invalid_argument& e) {
                 } catch (const out_of_range& e) {
-                    // Ignore numbers that get too big for float
                 }
                 break;
             }
